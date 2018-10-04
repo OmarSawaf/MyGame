@@ -2,23 +2,23 @@
 <html>
 <head>
 	<title>Differences Game</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="diff-style.css">
+	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel = "stylesheet" type = "text/css" href = "diff-style.css">
 </head>
 <body>
 
-  <div class="notify"><span id="notifyType" class=""></span></div>
+  <div class = "notify"><span id = "notifyType" class=""></span></div>
 	<br>
 	<h1> How Many Differences We Have ? </h1>
 	<br>
-
-	<img width="700px" height="450px" id="img" src="3 diff.jpg">
+  <!--image tag that specify our image-->
+	<img width="700px" height="450px" id="img" src="3_diff.jpg">
 	<br>
 	
   <div class="container">
 
-  
-   <div class="keyspaces">
+    <!-- creating divs to obtain the design of the radio button -->
+    <div class="keyspaces">
      <div class="keyboard " >
        <div class="colomns">
       	<input type="radio" name="pick" value =  "1"> 1
@@ -30,58 +30,60 @@
       </div>
     </div><div class="keyboard" >
       <div class="colomns">
-       <input type="radio" name="pick" value =  "3"> 3 
+          <input type="radio" name="pick" value =  "3"> 3 
       </div>
     </div><div class="keyboard" >
       <div class="colomns">
-         <input type="radio" name="pick" value =  "4"> 4
+          <input type="radio" name="pick" value =  "4"> 4
       </div>
     </div><div class="keyboard" data-value="5">
-      <div class="colomns">
-        <input type="radio" name="pick" value =  "5"> 5
+        <div class="colomns">
+          <input type="radio" name="pick" value =  "5"> 5
+        </div>
       </div>
     </div>
-  </div>
 
- 
-  <div  class="keyspaces">
-    <div class="keyboard">
-      <div class="colomns">
-         <input type="radio" name="pick" value =  "6"> 6
-      </div>
-    </div><div class="keyboard " >
-      <div class="colomns">
-         <input type="radio" name="pick" value =  "7"> 7 
-      </div>
-    </div><div class="keyboard" >
-      <div class="colomns">
-         <input type="radio" name="pick" value =  "8"> 8
-      </div>
-    </div><div class="keyboard" >
-      <div class="colomns">
-         <input type="radio" name="pick" value =  "9"> 9
-      </div>
-    </div><div class="keyboard" >
-      <div class="colomns">
-         <input type="radio" name="pick" value =  "10"> 10 
+    <!-- creating divs to obtain the design of the radio button -->
+    <div  class="keyspaces">
+      <div class="keyboard">
+        <div class="colomns">
+          <input type="radio" name="pick" value =  "6"> 6
+        </div>
+      </div><div class="keyboard " >
+        <div class="colomns">
+          <input type="radio" name="pick" value =  "7"> 7 
+        </div>
+      </div><div class="keyboard" >
+        <div class="colomns">
+          <input type="radio" name="pick" value =  "8"> 8
+        </div>
+      </div><div class="keyboard" >
+        <div class="colomns">
+          <input type="radio" name="pick" value =  "9"> 9
+        </div>
+      </div><div class="keyboard" >
+        <div class="colomns">
+          <input type="radio" name="pick" value =  "10"> 10 
+        </div>
       </div>
     </div>
-  </div>
 
  
   
-  <div  class="button-box">
-    <button id = "btn">GO!</button>
-  </div>
+    <div  class="button-box">
+      <button id = "btn">GO!</button>
+    </div>
 
-</div>
+  </div>
 	
 	<hr>
-<div style="padding-bottom: 30px;">
+<div style = "padding-bottom:30px;">
   <footer > Dev & Designed with ♥ By: Mohammad Omar & Mohammad Al-Deri</footer>
 </dir>
 	<script>
-		var c = 0; //counter for array's elements
+    //counter for array's elements
+    var c = 0; 
+    //Array to storing the images
 		var arr = [{src:'photos/3_diff.jpg', val: 3},
     {src:'kittydiferencias5.png',val:5},
     {src:'10diff.jpg',val:10},
@@ -89,39 +91,44 @@
     {src:'3_diffe.png', val:3},
     {src:'picsart_10-03-11.13.15.jpg',val:0}];
 
-
+    // on click listner for the button
 		$('button#btn').on('click', function() {
+      //saying good bye at the end
 			if (c === 6) {
 				$('body').html('');
 				$('body').html('<h1 class="bye"> Good Bye !!!!! </h1>')
 
-				}
-			else if($("input[name='pick']:checked").val() == arr[c].val) {
-				         $(".notify").toggleClass("active");
-                 $("#notifyType").toggleClass("success");
-                 setTimeout(function(){
-                     $(".notify").removeClass("active");
-                     $("#notifyType").removeClass("success");
-                 },3000);
+			}else if($("input[name='pick']:checked").val() == arr[c].val) {
+        //show notification in case the answer was correct !
+			  $(".notify").toggleClass("active");
+        $("#notifyType").toggleClass("success");
+        setTimeout(function(){
+          // setting the duration of the notification
+          $(".notify").removeClass("active");
+          $("#notifyType").removeClass("success");
+        },3000);
 				c++;
-				
+				//checking the status to hide the radio button for jozaaaaaaaa !
 				if (c === 5){
 					$('.keyspaces').hide();
 					$('#btn').html('Obviously No Differences');
-					$('img').attr('src',arr[c].src);
-                    c++;
+					$('img').attr('src', arr[c].src);
+          c++;
 					
 				}else {
-				$('img').attr('src',arr[c].src);
+          //getting the next image
+				  $('img').attr('src', arr[c].src);
 				}
 			}else{
-				        $(".notify").addClass("active");
-                $("#notifyType").addClass("failure");
+        //notification in case the answer was wrong !
+				$(".notify").addClass("active");
+        $("#notifyType").addClass("failure");
   
-                setTimeout(function(){
-                    $(".notify").removeClass("active");
-                    $("#notifyType").removeClass("failure");
-                },3000);
+        setTimeout(function(){
+          //setting the duration of the notification 
+          $(".notify").removeClass("active");
+          $("#notifyType").removeClass("failure");
+        },3000);
                 
 			}
 		})

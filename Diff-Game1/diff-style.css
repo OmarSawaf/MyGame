@@ -14,8 +14,7 @@
 
 #notifyType:before{
   display:block;
-  margin-top:15px; 
-  
+  margin-top:15px;  
 }
 
 .active{  
@@ -29,37 +28,39 @@
 .failure:before{
   Content:"Oh no ! try again :)";
 }
-img{
-	border : solid  3px;
-	border-radius: 2px;
-}
-h1{
-	color: white;
-}
-.bye{
-	padding-top : 15%;
-	font-family: cursive;
-	font-size: 150px;
 
+img{
+	border:solid 3px;
+	border-radius:2px;
+}
+
+h1{
+	color:white;
+}
+
+.bye{
+	padding-top:15%;
+	font-family:cursive;
+	font-size:150px;
 }
 
 body {
-  background-size: auto;
-  text-align : center;
-  font-family: sans-serif;
-  background: #42426b;
-  color: rgba(255,255,255,.5);
+  background-size:auto;
+  text-align:center;
+  font-family:sans-serif;
+  background:#42426b;
+  color:rgba(255,255,255,.5);
 }
 
 .container {
-  width: 80%;
-  max-width: 420px;
-  margin: 50px auto;
-  padding: 1.3em;
-  background: #292942;
-  border-radius: .75em;
-  -webkit-filter: drop-shadow(1px 2px 5px rgba(0,0,0,.3));
-  filter: drop-shadow(1px 2px 5px rgba(0,0,0,.3));
+  width:80%;
+  max-width:420px;
+  margin:50px auto;
+  padding:1.3em;
+  background:#292942;
+  border-radius:.75em;
+  -webkit-filter:drop-shadow(1px 2px 5px rgba(0,0,0,.3));
+  filter:drop-shadow(1px 2px 5px rgba(0,0,0,.3));
   box-shadow: 
     0 2px 2px rgba(243,49,128,.5),
     0 0px 5px rgba(243,49,128,.15),
@@ -70,32 +71,32 @@ body {
 }
 
 .keyspaces {
-  padding: 16px 0;
-  text-align: center;
-  background: rgba(255,255,255,.03);
-  border-radius: .3em;
+  padding:16px 0;
+  text-align:center;
+  background:rgba(255,255,255,.03);
+  border-radius:.3em;
 }
 
 .keyboard {
-  display: inline-block;
-  position: relative;
-  width: 20%;
+  display:inline-block;
+  position:relative;
+  width:20%;
 }
 
 .colomns {
-  background: rgba(0,0,0,.35);
+  background:rgba(0,0,0,.35);
   border: 2px solid rgba(243,49,128,.6);
 }
 
 button {
-  width: 80%;
-  margin-top: 1.2em;
-  padding: 1em;
-  max-width: 220px;
-  font-size: .9em;
-  color: #D42D78;
-  letter-spacing: .15em;
-  background: white;
-  border-radius: 5em;
-  cursor: pointer;
+  width:80%;
+  margin-top:1.2em;
+  padding:1em;
+  max-width:220px;
+  font-size:.9em;
+  color:#D42D78;
+  letter-spacing:.15em;
+  background:white;
+  border-radius:5em;
+  cursor:pointer;
 }
